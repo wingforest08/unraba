@@ -1,0 +1,339 @@
+:root {
+    --primary: #c97d0a;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg);
+    color: #ffff;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+    padding-left: 2%;
+    padding-right: 7%;
+    background-color: rgba(1, 16, 22);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.img-Logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    left: 0;
+}
+.navbar-logo {
+    margin: auto;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+.navbar-nav a.active {
+    background-color: gray; /* Warna background untuk link aktif */
+    color: white; /* Warna teks untuk link aktif */
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.navbar-nav a.active:hover {
+    color: black !important;
+    border-bottom: none;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.01rem;
+    border-bottom: 0.01rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar-nav a.active::after {
+    border-bottom: none;
+    transform: none;
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Hero section */
+.hero {
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/header-Bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+.content {
+    padding: 1.4rem 7%;
+    max-width: 90rem;
+}
+
+.content h1 {
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.content p {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 80%;
+}
+
+.cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+.cta2 {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: none;
+    border-radius: 0.5rem;
+}
+
+/* Portofolio Section */
+.portofolio .upper h3 {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.portofolio .upper ol {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.portofolio .row .portofolio-vid {
+    margin: auto;
+}
+.portofolio .row .portofolio-vid video {
+    height: 30rem;
+}
+
+/* Product section */
+.product p {
+    text-align: center;
+    font-weight: 100;
+}
+.product .row {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.product .row .product-card {
+    text-align: center;
+}
+.product .row .product-card img {
+    padding: 1rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.product .row .product-card .title {
+    margin-top: 0rem;
+}
+
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* Tablet */
+@media (max-width: 1200px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+    .about .row .content h3 {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row form {
+        padding-top: 0;
+    }
+
+    .navbar .navbar-extra-2 {
+        display: none;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Footer */
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 80px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 130%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Posisi segitiga di bawah tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+}
+
+.group:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Footer End */
