@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot:title>{{ $title }}</x-slot>
   <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 pt-40 pb-20 mt-24">
         <div class="max-w-screen-md mb-8 lg:mb-16">

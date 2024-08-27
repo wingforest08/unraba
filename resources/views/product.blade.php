@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot:title>{{ $title }}</x-slot>
   <section class="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-16">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0 pt-40 pb-20">
       <div class="mb-4 flex items-center justify-between gap-4 md:mb-8">

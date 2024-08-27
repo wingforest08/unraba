@@ -1,5 +1,5 @@
 <x-layout>
-
+    <x-slot:title>{{ $title }}</x-slot>
 <section class="bg-white dark:bg-gray-900">
   <div class=" py-8 pt-40 pb-20 lg:py-16 px-4 mx-auto max-w-screen-md mt-24 min-h-screen">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>

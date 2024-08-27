@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot:title>{{ $title }}</x-slot>
   <section class="hero" id = "home">
     <main class="content">
     <div >
